@@ -1,0 +1,7 @@
+alt API servers: 
+
+https://consumet-api-65wa.onrender.com
+\\ - https://movieapi-4c14.onrender.com/ - \\
+https://consumet-anime-api.vercel.app/
+https://march-api1.vercel.app
+https://amitrasu-backend.vercel.app

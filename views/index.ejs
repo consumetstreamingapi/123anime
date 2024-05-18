@@ -1,0 +1,48 @@
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Details</title>
+</head>
+<body>
+    <h1>Anime Details</h1>
+    <% if (animeData) { %>
+        <p>ID: <%= animeData.id %></p>
+        <p>Title: <%= animeData.title %></p>
+        <p>Start Date: <%= animeData.startDate.year %>/<%= animeData.startDate.month %>/<%= animeData.startDate.day %></p>
+        <p>End Date: <%= animeData.endDate.year %>/<%= animeData.endDate.month %>/<%= animeData.endDate.day %></p>
+        <p>Status: <%= animeData.status %></p>
+        <p>Description: <%= animeData.description %></p>
+        <p>Episodes: <%= animeData.episodes %></p>
+        <% if (animeData.nextAiringEpisode) { %>
+            <p>Next Airing Episode ID: <%= animeData.nextAiringEpisode.id %></p>
+        <% } %>
+        <ul>
+            <% animeData.streamingEpisodes.forEach(episode => { %>
+                <li>Title: <%= episode.title %></li>
+                <li>Thumbnail: <img src="<%= episode.thumbnail %>" alt="Thumbnail"></li>
+            <% }); %>
+        </ul>
+        <p>Duration: <%= animeData.duration %></p>
+          <% if (animeData.trailer && animeData.trailer.site) { %>
+            <p>Trailer Site: <%= animeData.trailer.id %></p>
+          <% } else { %>
+            <p>No trailer available.</p>
+          <% } %>
+        <img src="<%= animeData.coverImage.extraLarge %>" alt="Cover Image">
+        <img src="<%= animeData.bannerImage %>" alt="Banner Image">
+        <p>Genres: <%= animeData.genres.join(', ') %></p>
+        <ul>
+            <% animeData.tags.forEach(tag => { %>
+                <li>ID: <%= tag.id %>, Name: <%= tag.name %></li>
+            <% }); %>
+        </ul>
+        <p>Mean Score: <%= animeData.meanScore %></p>
+    <% } else { %>
+        <p>Anime data not available.</p>
+    <% } %>
+</body>
+</html>

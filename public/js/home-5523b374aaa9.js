@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk=globalThis.webpackChunk||[]).push([["home"],{38052:(e,s,r)=>{var o=r(36071);let t=new IntersectionObserver(e=>{for(let s of e)s.isIntersecting&&(window.dispatchEvent(new Event("resize")),t.disconnect())},{rootMargin:"0% 0% 0% 0%",threshold:0});(0,o.N7)(".js-webgl-globe-trigger",e=>{t.observe(e)})}},e=>{var s=s=>e(e.s=s);e.O(0,["vendors-node_modules_github_selector-observer_dist_index_esm_js"],()=>s(38052)),e.O()}]);
+//# sourceMappingURL=home-ee6ea2664b2e.js.map
